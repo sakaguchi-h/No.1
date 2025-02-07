@@ -24,28 +24,4 @@ document.getElementById("exploreBtn").addEventListener("click", function() {
         popup.style.opacity = "0";
         setTimeout(() => document.body.removeChild(popup), 500);
     }, 2000);
-
-    // ④ 絵文字をランダムに飛ばす
-    for (let i = 0; i < 10; i++) {
-        const emoji = document.createElement("div");
-        emoji.innerText = ["🎉", "🚀", "✨", "💡", "🌈"][Math.floor(Math.random() * 5)];
-        emoji.style.position = "fixed";
-        emoji.style.left = Math.random() * window.innerWidth + "px";
-        emoji.style.top = Math.random() * window.innerHeight + "px";
-        emoji.style.fontSize = "30px";
-        emoji.style.opacity = "1";
-        emoji.style.transition = "opacity 1s, transform 1s";
-        document.body.appendChild(emoji);
-
-        setTimeout(() => {
-            emoji.style.opacity = "0";
-            emoji.style.transform = "translateY(-50px)";
-            setTimeout(() => document.body.removeChild(emoji), 1000);
-        }, 500);
-    }
-
-    // ⑤ 自動スクロールで次のセクションへ
-    setTimeout(() => {
-        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-    }, 1000);
 });
