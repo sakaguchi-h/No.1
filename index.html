@@ -13,22 +13,46 @@
         <h1>IoTルーム公式サイトへようこそ</h1>
         <nav>
             <ul>
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#">サービス</a></li>
-                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#about">紹介</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- メインコンテンツ -->
-    <main>
-        <section class="hero">
-            <h2>ようこそ！</h2>
-            <p>これはサンプルのホームページです。</p>
-            <button id="changeTextBtn">メッセージを表示</button>
-            <p id="message"></p>
-        </section>
-    </main>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <h2>ようこそ！</h2>
+        <p>これはスクロールできる長いページのサンプルです。</p>
+        <button id="changeTextBtn">メッセージを表示</button>
+        <p id="message"></p>
+    </section>
+
+    <!-- 長いコンテンツ -->
+    <section id="about" class="content-section">
+        <h2>紹介</h2>
+        <p>私たちはウェブ開発を専門とするチームです。最新の技術を使い、魅力的なウェブサイトを制作します。</p>
+    </section>
+
+    <section id="services" class="content-section">
+        <h2>サービス</h2>
+        <ul>
+            <li>ウェブサイト制作</li>
+            <li>アプリ開発</li>
+            <li>SEO対策</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>お問い合わせ</h2>
+        <p>ご質問やご相談があれば、お気軽にご連絡ください。</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="お名前">
+            <input type="email" id="email" placeholder="メールアドレス">
+            <button type="submit">送信</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
 
     <!-- フッター -->
     <footer>
