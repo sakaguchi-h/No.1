@@ -3,7 +3,7 @@ function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("show");
 }
 
-// スクロール時のフェードイン
+// フェードインアニメーション
 const sections = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(entries => {
