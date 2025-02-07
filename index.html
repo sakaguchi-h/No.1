@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homepage</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS適用 -->
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSSを読み込む -->
 </head>
 <body>
-    <h1>こんにちは！</h1>
-    <p>これはGitHub Pagesで公開したホームページです。</p>
-    <button>クリックしてね</button>
 
-    <script src="script.js"></script> <!-- JavaScript適用 -->
+    <!-- ヘッダー -->
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">サービス</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <section class="hero">
+            <h2>ようこそ！</h2>
+            <p>これはサンプルのホームページです。</p>
+            <button id="changeTextBtn">メッセージを表示</button>
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>© 2025 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- JavaScriptを読み込む -->
 </body>
 </html>
