@@ -1,27 +1,23 @@
-// メッセージ表示
-document.getElementById('changeTextBtn').addEventListener('click', function() {
-    document.getElementById('message').textContent = "坂口CEOからの特別メッセージです！";
-});
-
-// フォーム送信時のメッセージ表示
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    document.getElementById('formMessage').textContent = "お問い合わせありがとうございます！";
-});
-
-// スムーズスクロール
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-            top: target.offsetTop - 50,
-            behavior: 'smooth'
-        });
-    });
-});
-
-// ハンバーガーメニューの切り替え
+// ナビゲーションのハンバーガーメニュー
 function toggleMenu() {
     document.getElementById("nav-menu").classList.toggle("show");
 }
+
+// スクロール時のフェードイン
+const sections = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+    section.style.opacity = 0;
+    section.style.transform = "translateY(50px)";
+    section.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+    observer.observe(section);
+});
