@@ -1,32 +1,35 @@
-/* 全体のデザイン */
+/* 基本スタイル */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
     background-color: #f4f4f4;
-    text-align: center;
 }
 
 /* ヘッダー */
 header {
-    background-color: #007bff;
+    background: #333;
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
+    text-align: center;
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 
-/* ナビゲーション */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 10px 15px;
 }
 
 nav ul li a {
@@ -35,38 +38,97 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* スクロールする長いコンテンツ */
-.content-section {
-    padding: 100px 20px;
-    background-color: white;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* ボタン */
-button {
-    background-color: #007bff;
+/* ヒーローセクション */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
+    text-align: center;
+    padding: 120px 20px;
+    margin-top: 60px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.hero h2 {
+    font-size: 2rem;
+}
+
+/* コンテンツセクション */
+.content-section {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* フォーム */
+#contactForm input, #contactForm button {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contactForm button {
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background: #555;
 }
 
 /* フッター */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    margin-top: 50px;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+/* スマホ向けレスポンシブ調整 */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background: #333;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
 }
