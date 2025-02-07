@@ -47,8 +47,10 @@ nav ul li a {
     transition: 0.3s;
 }
 
+/* ボタンの効果 */
 .hero button:hover {
     background: #ff5733;
+    transform: scale(1.1);
 }
 
 /* セクション */
