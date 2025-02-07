@@ -1,0 +1,30 @@
+/* 全体のデザイン */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ヘッダーのデザイン */
+h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+/* 段落のデザイン */
+p {
+    color: #555;
+    font-size: 1.2em;
+}
+
+/* リンクのデザイン */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
