@@ -12,8 +12,13 @@ header {
     background-color: #007bff;
     color: white;
     padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
+/* ナビゲーション */
 nav ul {
     list-style: none;
     padding: 0;
@@ -30,18 +35,18 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* ヒーローセクション */
-.hero {
-    margin: 50px auto;
-    padding: 20px;
+/* スクロールする長いコンテンツ */
+.content-section {
+    padding: 100px 20px;
     background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 600px;
 }
 
-/* ボタンデザイン */
+/* ボタン */
 button {
     background-color: #007bff;
     color: white;
@@ -50,7 +55,6 @@ button {
     font-size: 1em;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
 }
 
 button:hover {
@@ -63,14 +67,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* レスポンシブデザイン（スマホ対応） */
-@media screen and (max-width: 768px) {
-    .hero {
-        width: 90%;
-    }
+    position: relative;
+    margin-top: 50px;
 }
