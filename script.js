@@ -1,10 +1,9 @@
-// ボタンがクリックされたときの処理
 document.addEventListener("DOMContentLoaded", function() {
-    let button = document.querySelector("button");
-    let message = document.createElement("p");
+    let button = document.getElementById("changeTextBtn");
+    let message = document.getElementById("message");
 
     button.addEventListener("click", function() {
         message.textContent = "ボタンがクリックされました！";
-        document.body.appendChild(message);
+        message.style.color = "#007bff";
     });
 });
