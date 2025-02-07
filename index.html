@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>坂口モーター(株)</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- CSSを読み込む -->
 </head>
 <body>
 
     <!-- ヘッダー -->
     <header>
-        <h1>🌟 坂口モーター(株) 🌟</h1>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <h1>坂口モーター公式サイトへようこそ 🚗✨</h1>
         <nav>
-            <ul id="nav-menu">
-                <li><a href="#about">CEOメッセージ</a></li>
+            <ul>
+                <li><a href="#about">坂口CEOのありがたいお言葉</a></li>
                 <li><a href="#services">サービス</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
             </ul>
@@ -24,37 +22,35 @@
 
     <!-- ヒーローセクション -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>🚀 坂口モーターへようこそ！</h2>
-            <p>楽しく、カラフルでポップな世界へ！</p>
-            <button id="exploreBtn">詳しく見る 💡</button>
-        </div>
+        <h2>ようこそ！</h2>
+        <p>これはスクロールできる長いページのサンプルです。</p>
+        <button id="exploreBtn">詳しく見る</button>
     </section>
 
-    <!-- CEOメッセージ -->
-    <section id="about" class="content-section fade-in">
-        <h2>🌈 坂口CEOメッセージ</h2>
-        <p>私たちは最高の技術力で未来を創ります！</p>
+    <!-- 長いコンテンツ -->
+    <section id="about" class="content-section">
+        <h2>坂口CEOのありがたいお言葉</h2>
+        <p>私たちはウェブ開発を専門とするチームです。最新の技術を使い、魅力的なウェブサイトを制作します。</p>
+        <p>一緒に働く仲間を募集します。</p>
     </section>
 
-    <!-- サービス -->
-    <section id="services" class="content-section fade-in">
-        <h2>🎨 提供サービス</h2>
-        <div class="service-list">
-            <div class="service-item">🌍 ウェブサイト制作</div>
-            <div class="service-item">📱 アプリ開発</div>
-            <div class="service-item">📈 SEO対策</div>
-            <div class="service-item">🖨️ 3Dプリンター製作</div>
-        </div>
+    <section id="services" class="content-section">
+        <h2>サービス</h2>
+        <ul>
+            <li>🚀 ウェブサイト制作</li>
+            <li>📱 アプリ開発</li>
+            <li>🔍 SEO対策</li>
+            <li>🖨️ 3Dプリンター製作</li>
+        </ul>
     </section>
 
-    <!-- お問い合わせ -->
-    <section id="contact" class="content-section fade-in">
-        <h2>📩 お問い合わせ</h2>
+    <section id="contact" class="content-section">
+        <h2>お問い合わせ</h2>
+        <p>ご質問やご相談があれば、お気軽にご連絡ください。</p>
         <form id="contactForm">
-            <input type="text" id="name" placeholder="お名前" required>
-            <input type="email" id="email" placeholder="メールアドレス" required>
-            <button type="submit">送信 🚀</button>
+            <input type="text" id="name" placeholder="お名前">
+            <input type="email" id="email" placeholder="メールアドレス">
+            <button type="submit">送信</button>
         </form>
         <p id="formMessage"></p>
     </section>
@@ -64,5 +60,6 @@
         <p>© 2025 坂口モーター(株). All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script> <!-- JavaScriptを読み込む -->
 </body>
 </html>
