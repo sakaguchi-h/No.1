@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>坂口モーター(株</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSSを読み込む -->
+    <title>坂口モーター(株)</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
     <!-- ヘッダー -->
     <header>
         <h1>坂口モーター公式サイトへようこそ</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="#about">坂口CEOのありがたいお言葉</a></li>
                 <li><a href="#services">サービス</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
@@ -32,7 +34,6 @@
     <section id="about" class="content-section">
         <h2>坂口CEOのありがたいお言葉</h2>
         <p>私たちはウェブ開発を専門とするチームです。最新の技術を使い、魅力的なウェブサイトを制作します。</p>
-        <p>一緒に働く仲間を募集します。</p>
     </section>
 
     <section id="services" class="content-section">
@@ -49,8 +50,8 @@
         <h2>お問い合わせ</h2>
         <p>ご質問やご相談があれば、お気軽にご連絡ください。</p>
         <form id="contactForm">
-            <input type="text" id="name" placeholder="お名前">
-            <input type="email" id="email" placeholder="メールアドレス">
+            <input type="text" id="name" placeholder="お名前" required>
+            <input type="email" id="email" placeholder="メールアドレス" required>
             <button type="submit">送信</button>
         </form>
         <p id="formMessage"></p>
@@ -58,9 +59,8 @@
 
     <!-- フッター -->
     <footer>
-        <p>© 2025 My Website. All rights reserved.</p>
+        <p>© 2025 坂口モーター(株). All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script> <!-- JavaScriptを読み込む -->
 </body>
 </html>
